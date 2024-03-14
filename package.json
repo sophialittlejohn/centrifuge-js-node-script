@@ -1,0 +1,19 @@
+{
+  "name": "dune-script",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc",
+    "start": "yarn build && node dist/index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@centrifuge/centrifuge-js": "file:../apps-yet-another-copy/centrifuge-js",
+    "@polkadot/api-derive": "^10.12.2",
+    "rxjs": "^7.8.1",
+    "typescript": "^5.4.2"
+  }
+}
