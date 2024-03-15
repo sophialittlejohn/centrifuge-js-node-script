@@ -28,13 +28,13 @@ const main = async () => {
               portfolio: portfolio.toJSON(),
               trancheTokenPrices: trancheTokenPrices.toJSON(),
             };
-          }),
-          take(1)
+          })
         )
       );
     })
   );
   console.log(results);
+  return results;
 };
 
 main().catch(console.error);
