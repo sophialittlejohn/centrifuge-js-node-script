@@ -2,8 +2,10 @@
 # yarn lockfile v1
 
 
-"@centrifuge/centrifuge-js@file:../apps-yet-another-copy/centrifuge-js":
-  version "0.7.0"
+"@centrifuge/centrifuge-js@0.8.0":
+  version "0.8.0"
+  resolved "https://registry.yarnpkg.com/@centrifuge/centrifuge-js/-/centrifuge-js-0.8.0.tgz#6f82329a5e371c0b96300c60a6babc1840f6ea58"
+  integrity sha512-Gv5INU5KISVemmge8U0uWfvON2FhbeMd6HtGqkoN6tHLpVApLO+w/bWIEzNXdclODOCdfcij1DfgtDi5EZO9BA==
   dependencies:
     "@ethersproject/abi" "^5.6.0"
     "@ethersproject/address" "^5.6.0"
@@ -833,9 +835,9 @@
     "@types/node" "*"
 
 "@types/node@*":
-  version "20.11.27"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-20.11.27.tgz#debe5cfc8a507dd60fe2a3b4875b1604f215c2ac"
-  integrity sha512-qyUZfMnCg1KEz57r7pzFtSGt49f6RPkPBis3Vo4PbS7roQEDn22hiHzl/Lo1q4i4hDEgBJmBF/NTNg2XR0HbFg==
+  version "20.11.28"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-20.11.28.tgz#4fd5b2daff2e580c12316e457473d68f15ee6f66"
+  integrity sha512-M/GPWVS2wLkSkNHVeLkrF2fD5Lx5UC4PxA0uZcKc6QqbIQUJyW1jVjueJYi1z8n0I5PxYrtpnPnWglE+y9A0KA==
   dependencies:
     undici-types "~5.26.4"
 

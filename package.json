@@ -11,7 +11,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@centrifuge/centrifuge-js": "file:../apps-yet-another-copy/centrifuge-js",
+    "@centrifuge/centrifuge-js": "0.8.0",
     "@polkadot/api-derive": "^10.12.2",
     "rxjs": "^7.8.1",
     "typescript": "^5.4.2"
