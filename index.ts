@@ -18,19 +18,25 @@ const main = async () => {
       return combineLatest([api, pools]);
     }),
     switchMap(([api, pools]) => {
-      const poolIds = pools.map((pool) => pool.id);
-      const poolCalls = poolIds.map((poolId) => {
+      const poolCalls = pools.map((pool) => {
+        const trancheTotalIssuance = pool.tranches.map((tranche) =>
+          api.query.ormlTokens.totalIssuance({
+            Tranche: [pool.id, tranche.id],
+          })
+        );
         return forkJoin([
-          api.call.poolsApi.nav(poolId),
-          api.call.loansApi.portfolio(poolId),
-          api.call.poolsApi.trancheTokenPrices(poolId),
+          api.call.poolsApi.nav(pool.id),
+          api.call.loansApi.portfolio(pool.id),
+          api.call.poolsApi.trancheTokenPrices(pool.id),
+          ...trancheTotalIssuance,
         ]).pipe(
-          map(([nav, portfolio, trancheTokenPrices]) => {
+          map(([nav, portfolio, trancheTokenPrices, ...totalIssuance]) => {
             return {
-              poolId,
+              poolId: pool.id,
               nav: nav.toJSON(),
               portfolio: portfolio.toJSON(),
               trancheTokenPrices: trancheTokenPrices.toJSON(),
+              totalIssuance,
             };
           })
         );
