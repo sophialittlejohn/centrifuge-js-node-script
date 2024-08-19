@@ -10,7 +10,7 @@ const main = async () => {
   const poolData = centrifuge.getApi().pipe(
     map((api) => {
       return api.at(
-        "0xd96aba180357599933e246625ccd161c0ea90d7704e3f9e3bc67f06c040d10ac"
+        "0x5e66168eba05484ef26bf258f9c9dd3a7d8d6338203ebb52f77cffa7bad34d1f"
       );
     }),
     switchMap((api) => {
